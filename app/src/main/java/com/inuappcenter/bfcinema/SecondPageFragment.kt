@@ -18,10 +18,11 @@ class SecondPageFragment  : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_movie, container, false)
         view.findViewById<ImageView>(R.id.iv_poster).setImageResource(R.drawable.this_week_movie2)
-        view.findViewById<TextView>(R.id.tv_name).text = "개를 훔치는 완벽한 방법"
-        view.findViewById<RatingBar>(R.id.rb).rating = 3.7F
-        view.findViewById<TextView>(R.id.tv_genre).text = "드라마"
-        view.findViewById<TextView>(R.id.tv_year).text = "2014"
+        val array: Array<String> = resources.getStringArray(R.array.movie2)
+        view.findViewById<TextView>(R.id.tv_name).text = array.get(0)
+        view.findViewById<RatingBar>(R.id.rb).rating = array.get(1).toFloat()
+        view.findViewById<TextView>(R.id.tv_genre).text = array.get(2)
+        view.findViewById<TextView>(R.id.tv_year).text = array.get(3)
 
         return view
     }

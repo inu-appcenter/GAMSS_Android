@@ -18,10 +18,11 @@ class FirstPageFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_movie, container, false)
         view.findViewById<ImageView>(R.id.iv_poster).setImageResource(R.drawable.this_week_movie1)
-        view.findViewById<TextView>(R.id.tv_name).text = "7번방의 선물"
-        view.findViewById<RatingBar>(R.id.rb).rating = 4.5F
-        view.findViewById<TextView>(R.id.tv_genre).text = "코미디"
-        view.findViewById<TextView>(R.id.tv_year).text = "2012"
+        val array: Array<String> = resources.getStringArray(R.array.movie1)
+        view.findViewById<TextView>(R.id.tv_name).text = array.get(0)
+        view.findViewById<RatingBar>(R.id.rb).rating = array.get(1).toFloat()
+        view.findViewById<TextView>(R.id.tv_genre).text = array.get(2)
+        view.findViewById<TextView>(R.id.tv_year).text = array.get(3)
 
         return view
     }
