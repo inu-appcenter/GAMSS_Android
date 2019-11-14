@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="299dp"
+    android:layout_height="match_parent"
+    tools:context=".DrawerFragment"
+    android:background="@color/color_000000">
+
+    <ImageView
+        android:id="@+id/iv_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_icon"
+        android:layout_marginTop="28.3dp"
+        android:layout_marginStart="40.3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="45.3dp"
+        android:textSize="30.7sp"
+        android:textColor="#fff"
+        android:text="정서연"
+        android:layout_marginTop="17.3dp"
+        app:layout_constraintStart_toStartOf="@+id/iv_user"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user"/>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="16sp"
+    android:textColor="#fff"
+    android:text="\t님"
+    android:layout_marginTop="17.3dp"
+    app:layout_constraintStart_toEndOf="@id/tv_user_name"
+    app:layout_constraintBottom_toBottomOf="@+id/tv_user_name"/>
+
+    <ImageView
+        android:id="@+id/iv_naver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/naver"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_user_id"
+        app:layout_constraintStart_toStartOf="@id/iv_user"
+        app:layout_constraintTop_toTopOf="@+id/tv_user_id" />
+
+    <TextView
+        android:id="@+id/tv_user_id"
+        android:layout_width="wrap_content"
+        android:layout_height="15.7dp"
+        android:layout_marginTop="6dp"
+        android:text="nalla5013@naver.com"
+        android:textColor="@color/color_bbbbbb"
+        android:textSize="10.7sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_naver"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+    <LinearLayout
+        android:id="@+id/linear_donation"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56.3dp"
+        app:layout_constraintStart_toStartOf="@id/iv_user"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_id">
+
+        <ImageView
+            android:id="@+id/iv_donation"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="0.3dp"
+            android:src="@drawable/icon_donation" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:text="정기후원"
+            android:textColor="#fff"
+            android:textSize="18.7sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34.7dp"
+        app:layout_constraintStart_toStartOf="@id/iv_user"
+        app:layout_constraintTop_toBottomOf="@+id/linear_donation">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_ticket" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15.7dp"
+            android:text="결제내역"
+            android:textColor="#fff"
+            android:textSize="18.7sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34.3dp"
+        app:layout_constraintStart_toStartOf="@id/iv_user"
+        app:layout_constraintTop_toBottomOf="@+id/linear_pay">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/icon_map" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16.7dp"
+            android:text="위치지도"
+            android:textColor="#fff"
+            android:textSize="18.7sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_user_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/iv_user"
+        app:layout_constraintTop_toBottomOf="@+id/linear_map">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_user_info" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16.7dp"
+            android:text="정보수정"
+            android:textColor="#fff"
+            android:textSize="18.7sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
