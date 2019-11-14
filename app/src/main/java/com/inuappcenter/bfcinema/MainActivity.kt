@@ -6,12 +6,17 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_funding.*
+import kotlinx.android.synthetic.main.layout_vote.*
 
 class MainActivity : AppCompatActivity() , View.OnClickListener {
+    val VOTE_1 = 1
+    val VOTE_2 = 2
 
     override fun onClick(v: View?) {
         when (v){
             btn_drawer -> drawer_layout.openDrawer(Gravity.LEFT)
+            linear_vote1 -> setProgressVote(VOTE_1)
+            linear_vote2 -> setProgressVote(VOTE_2)
         }
     }
 
@@ -33,4 +38,8 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
             super.onBackPressed()
         }
     }
+    fun setProgressVote(select:Int){
+
+    }
+
 }
