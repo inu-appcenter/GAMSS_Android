@@ -1,11 +1,11 @@
 package com.inuappcenter.bfcinema
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_drawer.*
 
 class MainActivity : AppCompatActivity() , View.OnClickListener {
 
@@ -20,7 +20,14 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         btn_drawer.setOnClickListener(this)
-        var drawer = getSupportFragmentManager().findFragmentById(R.id.drawer)
+    }
 
+    override fun onBackPressed() {
+        if (drawer_layout.isDrawerOpen(findViewById<View>(R.id.drawer_main))) {
+            drawer_layout.closeDrawers()
+        }
+        else {
+            super.onBackPressed()
+        }
     }
 }
