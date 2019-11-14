@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val adapter = MoviePagerAdapter(supportFragmentManager)
+        vp_movie.adapter = adapter
+
         btn_drawer.setOnClickListener(this)
     }
 
