@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">BFCinema</string>
+    <string-array name="movie1">
+        <item>7번방의 선물</item>
+        <item>4.5</item>
+        <item>코미디</item>
+        <item>2012</item>
+    </string-array>
+    <string-array name="movie2">
+        <item>개를 훔치는 완벽한 방법</item>
+        <item>3.7</item>
+        <item>드라마</item>
+        <item>2014</item>
+    </string-array>
 </resources>
