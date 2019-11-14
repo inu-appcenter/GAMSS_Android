@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/color_0e0e0e">
 
     <androidx.drawerlayout.widget.DrawerLayout
-        android:id="@+id/drawer_main"
+        android:id="@+id/drawer_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,15 +20,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageButton
+                android:id="@+id/btn_drawer"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:background="#00000000"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="33dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_drawer" />
+
+            <ImageButton
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:background="#00000000"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_drawer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_drawer"
+                app:srcCompat="@drawable/icon_search" />
+
+<!--            <include-->
+<!--                layout="@layout/layout_vote"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="466dp"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/include_event"/>-->
+
             <include
+                android:id="@+id/include_event"
                 layout="@layout/layout_event"
                 android:layout_width="match_parent"
                 android:layout_height="294.7dp"
                 app:layout_constraintBottom_toBottomOf="parent"/>
-         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <fragment
-            android:id="@+id/drawer_main_mypage"
+            android:id="@+id/drawer_main"
             android:layout_width="299dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
@@ -35,7 +66,6 @@
             tools:layout="@layout/fragment_drawer"
             android:name = "com.inuappcenter.bfcinema.DrawerFragment"
             />
-
 
     </androidx.drawerlayout.widget.DrawerLayout>
 

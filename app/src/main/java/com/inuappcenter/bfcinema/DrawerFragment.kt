@@ -23,14 +23,14 @@ class DrawerFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var rootView = inflater.inflate(R.layout.fragment_drawer, container, false)
+        return inflater.inflate(R.layout.fragment_drawer, container, false)
 
         linear_donation.setOnClickListener(this)
         linear_map.setOnClickListener(this)
         linear_pay.setOnClickListener(this)
         linear_user_info.setOnClickListener(this)
 
-        return rootView
+
     }
 
 
