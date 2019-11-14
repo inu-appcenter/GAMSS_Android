@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="progressBarHorizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:background">@drawable/progress_vote</item>
+        <item name="android:max">100</item>
+        <item name="android:progress">82</item>
+        <item name="android:progressTint">@color/color_3effde</item>
+        <item name="android:progressDrawable">@drawable/progress_vote</item>
+    </style>
+
 </resources>
