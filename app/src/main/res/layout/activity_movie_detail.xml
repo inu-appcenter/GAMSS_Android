@@ -18,7 +18,7 @@
         android:textSize="14.7sp"
         android:textColor="@color/color_0e0e0e"
         android:text="줄거리"
-        android:layout_marginTop="26.7dp"
+        android:layout_marginTop="28dp"
         android:layout_marginStart="47dp"
         app:layout_constraintTop_toBottomOf="@+id/include_movie_detail"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -32,22 +32,24 @@
         android:lineSpacingExtra="6.7sp"
         android:layout_marginStart="47dp"
         android:layout_marginEnd="34.3dp"
-        android:layout_marginTop="11.7dp"
+        android:layout_marginTop="13dp"
         app:layout_constraintTop_toBottomOf="@+id/story"/>
 
     <LinearLayout
+        android:id="@+id/ll_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@+id/tv_story"
-        app:layout_constraintTop_toBottomOf="@id/tv_story">
+        app:layout_constraintTop_toBottomOf="@id/tv_story"
+        app:layout_constraintBottom_toBottomOf="parent">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginEnd="42dp">
             <TextView
+                android:id="@+id/tv_seats"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
@@ -66,6 +68,7 @@
             android:orientation="vertical"
             android:layout_marginEnd="42dp">
             <TextView
+                android:id="@+id/tv_runningtime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
