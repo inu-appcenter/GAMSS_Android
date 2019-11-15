@@ -14,6 +14,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import kotlinx.android.synthetic.main.activity_location_map.*
 
 
 class LocationMapActivity : FragmentActivity() , OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
@@ -73,6 +74,8 @@ class LocationMapActivity : FragmentActivity() , OnMapReadyCallback, GoogleMap.O
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as SupportMapFragment?
         mapFragment!!.getMapAsync(this)
+
+        iv_back.setOnClickListener { finish() }
     }
     private fun showBottomSheet(tag:String){
         val bottomSheetFragment=BottomSheetFragment()
