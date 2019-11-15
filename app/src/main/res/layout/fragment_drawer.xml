@@ -72,6 +72,7 @@
         android:id="@+id/linear_donation"
         android:layout_width="108dp"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:layout_marginTop="56.3dp"
         app:layout_constraintStart_toStartOf="@id/iv_user"
         app:layout_constraintTop_toBottomOf="@+id/tv_user_id">
@@ -85,7 +86,7 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="정기후원"
             android:textColor="#fff"
@@ -97,6 +98,7 @@
         android:id="@+id/linear_pay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:layout_marginTop="34.7dp"
         app:layout_constraintStart_toStartOf="@id/iv_user"
         app:layout_constraintTop_toBottomOf="@+id/linear_donation">
@@ -108,7 +110,7 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="15.7dp"
             android:text="결제내역"
             android:textColor="#fff"
@@ -120,6 +122,7 @@
         android:id="@+id/linear_map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:layout_marginTop="34.3dp"
         app:layout_constraintStart_toStartOf="@id/iv_user"
         app:layout_constraintTop_toBottomOf="@+id/linear_pay">
@@ -131,7 +134,7 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16.7dp"
             android:text="위치지도"
             android:textColor="#fff"
@@ -143,6 +146,7 @@
         android:id="@+id/linear_user_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="@id/iv_user"
         app:layout_constraintTop_toBottomOf="@+id/linear_map">
@@ -154,7 +158,7 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16.7dp"
             android:text="정보수정"
             android:textColor="#fff"

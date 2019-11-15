@@ -1,14 +1,16 @@
 package com.inuappcenter.bfcinema
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.layout_funding.*
 import kotlinx.android.synthetic.main.layout_vote.*
 
 class MainActivity : AppCompatActivity() , View.OnClickListener {
@@ -29,11 +31,21 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         val adapter = MoviePagerAdapter(supportFragmentManager)
-        vp_movie.adapter = adapter
+        val viewpager = findViewById<ViewPager>(R.id.vp_movie)
+        viewpager.adapter = adapter
+        viewpager.setPageTransformer(false, CustPagerTransformer(this))
+        viewpager.clipToPadding = false
+        val px = dpToPx(this, 60F)
+        viewpager.setPadding(px, 0, px, 0)
+        viewpager.pageMargin = px/3
 
         btn_drawer.setOnClickListener(this)
         linear_vote1.setOnClickListener(this)
         linear_vote2.setOnClickListener(this)
+    }
+
+    fun dpToPx(context:Context, dp:Float): Int {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.resources.displayMetrics).toInt()
     }
 
     override fun onBackPressed() {
