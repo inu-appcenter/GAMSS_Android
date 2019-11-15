@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/include_movie_detail"
+        layout="@layout/layout_movie_detail"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14.7sp"
+        android:textColor="@color/color_0e0e0e"
+        android:text="줄거리"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="47dp"
+        app:layout_constraintTop_toBottomOf="@+id/include_movie_detail"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_story"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10.7sp"
+        android:textColor="@color/color_0e0e0e"
+        android:lineSpacingExtra="6.7sp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="34.3dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/story"/>
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/tv_story"
+        app:layout_constraintTop_toBottomOf="@id/tv_story"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="42dp">
+            <TextView
+                android:id="@+id/tv_seats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/color_0e0e0e"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9.3sp"
+                android:textColor="@color/color_0e0e0e"
+                android:text="좌석 수"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="42dp">
+            <TextView
+                android:id="@+id/tv_runningtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/color_0e0e0e"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9.3sp"
+                android:textColor="@color/color_0e0e0e"
+                android:text="러닝타임"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="42dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/color_0e0e0e"
+                android:text="음성 • 화면해설"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9.3sp"
+                android:textColor="@color/color_0e0e0e"
+                android:text="배리어프리"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -42,39 +43,42 @@
                 app:layout_constraintTop_toTopOf="@+id/btn_drawer"
                 app:srcCompat="@drawable/icon_search" />
 
-            <TextView
-                android:id="@+id/tv_thisweek"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="30.7sp"
-                android:textColor="@color/color_ffffff"
-                android:text="이번주 영화"
-                android:layout_marginTop="75.3dp"
-                android:layout_marginStart="40dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/vp_movie"/>
-
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/vp_movie"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="33.3dp"
-                app:layout_constraintTop_toBottomOf="@id/tv_thisweek"
-                app:layout_constraintHeight_percent="0.6"/>
+                android:layout_height="match_parent"
+                android:layout_marginTop="56dp">
 
-<!--            <include-->
-<!--                layout="@layout/layout_vote"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="466dp"-->
-<!--                app:layout_constraintBottom_toTopOf="@id/include_event"/>-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
 
-            <include
-                android:id="@+id/include_event"
-                layout="@layout/layout_event"
-                android:layout_width="match_parent"
-                android:layout_height="294.7dp"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                    <include
+                        android:id="@+id/include_funding"
+                        layout="@layout/layout_funding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/include_vote"/>
+
+                    <include
+                        android:id="@+id/include_vote"
+                        layout="@layout/layout_vote"
+                        android:layout_width="match_parent"
+                        android:layout_height="430dp"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/include_funding"
+                        app:layout_constraintBottom_toTopOf="@id/include_event"/>
+
+                    <include
+                        android:id="@+id/include_event"
+                        layout="@layout/layout_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="294.7dp"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
