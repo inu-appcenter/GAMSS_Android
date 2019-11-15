@@ -3,6 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="progressBarHorizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
@@ -20,7 +21,7 @@
 
     <style name="AppModalStyle"
         parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/rounded_top</item>
+        <item name="android:background">#00000000</item>
     </style>
 
 </resources>

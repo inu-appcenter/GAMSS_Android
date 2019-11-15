@@ -25,34 +25,37 @@ class LocationMapActivity : FragmentActivity() , OnMapReadyCallback, GoogleMap.O
     lateinit var mMap : GoogleMap
 
     override fun onMapReady(googleMap: GoogleMap?) {
-        mMap = googleMap!!
-        val seoul =
-            LatLng(37.425434, 126.66528)
-
-        // 구글 맵에 표시할 마커에 대한 옵션 설정
-        val markerOptions =
-            MarkerOptions()
-        markerOptions
-//            .icon(BitmapDescriptorFactory.defaultMarker(R.drawable.map_marker))
-            .position(seoul)
-            .title("청학동 베프시네마")
-
-
         val bitmapDraw =
             resources.getDrawable(R.drawable.map_marker) as BitmapDrawable
         val b: Bitmap? = bitmapDraw.bitmap
-        val smallMarker: Bitmap? =
-            Bitmap.createScaledBitmap(b!!, dpToPx(baseContext,66), dpToPx(baseContext,83), false)
-        markerOptions.icon(
-            BitmapDescriptorFactory.fromBitmap(
-                smallMarker
+
+        mMap = googleMap!!
+        val chunghak = LatLng(37.425434, 126.66528)
+        val guwal = LatLng(37.490819, 126.671800)
+        val bupyung = LatLng(37.462026, 126.725160)
+        val center = LatLng(37.460473, 126.691348)
+
+        val locationArray : ArrayList<LatLng> = java.util.ArrayList()
+        locationArray.add(chunghak)
+        locationArray.add(guwal)
+        locationArray.add(bupyung)
+
+        for (i in 0 until locationArray.size){
+            val markerOptions = MarkerOptions()
+            markerOptions.position(locationArray.get(i))
+//                .title("청학동 베프시네마")
+            val smallMarker: Bitmap? =
+                Bitmap.createScaledBitmap(b!!, dpToPx(baseContext,66), dpToPx(baseContext,83), false)
+            markerOptions.icon(
+                BitmapDescriptorFactory.fromBitmap(
+                    smallMarker
+                )
             )
-        )
+            // 마커를 생성한다.
+            mMap.addMarker(markerOptions)
+        }
 
-        // 마커를 생성한다.
-        mMap.addMarker(markerOptions)
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(seoul))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(center,12f))
         mMap.setOnMarkerClickListener(this)
     }
 
