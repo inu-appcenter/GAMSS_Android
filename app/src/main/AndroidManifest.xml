@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.inuappcenter.bfcinema">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/app_icon"
@@ -9,6 +11,7 @@
         android:roundIcon="@mipmap/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".LocationMapActivity"></activity>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,8 +21,13 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".MainActivity">
         </activity>
-        <activity android:name=".MovieDetailActivity"/>
-        <activity android:name=".MakeReservationActivity"/>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MovieDetailActivity" />
+        <activity android:name=".MakeReservationActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDLj394kB8sTax-JlmoMVE4Y6cba-U9UwA" />
     </application>
 
 </manifest>
