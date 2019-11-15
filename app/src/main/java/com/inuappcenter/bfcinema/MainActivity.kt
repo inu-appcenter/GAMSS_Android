@@ -35,8 +35,8 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         viewpager.adapter = adapter
         viewpager.setPageTransformer(false, CustPagerTransformer(this))
         viewpager.clipToPadding = false
-        val px = dpToPx(this, 60F)
-        viewpager.setPadding(px, 0, px, 0)
+        val px = dpToPx(this, 40.3F)
+        viewpager.setPadding(px, 0, px/2, 0)
         viewpager.pageMargin = px/3
 
         btn_drawer.setOnClickListener(this)
