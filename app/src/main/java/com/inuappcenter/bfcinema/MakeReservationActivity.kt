@@ -21,8 +21,14 @@ class MakeReservationActivity  : AppCompatActivity(), View.OnClickListener {
         niceSpinner.attachDataSource<String>(dataset)
         niceSpinner.setOnSpinnerItemSelectedListener { parent, view, position, id ->
             when(parent.getItemAtPosition(position)){
-                "1명" -> item = 1
-                "2명" -> item = 2
+                "1명" -> {
+                    item = 1
+                    tv_price.text = "10000원"
+                }
+                "2명" -> {
+                    item = 2
+                    tv_price.text = "20000원"
+                }
             }
         }
 
