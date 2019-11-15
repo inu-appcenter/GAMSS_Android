@@ -32,7 +32,17 @@ class MovieDetailActivity : AppCompatActivity(), View.OnClickListener {
 //            }
             R.id.btn_reservation -> {
                 val intent = Intent(this, MakeReservationActivity::class.java)
-                startActivity(intent)
+                startActivityForResult(intent, 100)
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
+        if (requestCode == 100) {
+            if (resultCode == 100) {
+                val num = intent!!.getIntExtra("num", 1)
+                val text = tv_remaining.text[0].toString().toInt()
+                tv_remaining.text = (text - num).toString() + "석 남음"
             }
         }
     }

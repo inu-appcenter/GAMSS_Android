@@ -137,6 +137,14 @@
         app:layout_constraintStart_toStartOf="@+id/iv_poster"
         app:layout_constraintTop_toBottomOf="@id/iv_poster"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/status_bar"
+        app:layout_constraintEnd_toEndOf="@id/btn_reservation"
+        app:layout_constraintTop_toTopOf="@id/tv_remaining"
+        app:layout_constraintBottom_toBottomOf="@id/tv_remaining"/>
+
     <TextView
         android:id="@+id/tv_status"
         android:layout_width="wrap_content"
