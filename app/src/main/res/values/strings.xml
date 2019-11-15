@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BFCinema</string>
+    <string name="app_name">베프시네마</string>
     <string-array name="movie1">
         <item>7번방의 선물</item>
         <item>4.5</item>
