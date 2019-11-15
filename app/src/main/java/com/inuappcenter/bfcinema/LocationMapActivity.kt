@@ -17,8 +17,12 @@ import com.google.android.gms.maps.model.MarkerOptions
 
 
 class LocationMapActivity : FragmentActivity() , OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
-    override fun onMarkerClick(p0: Marker?): Boolean {
-        showBottomSheet()
+    override fun onMarkerClick(marker: Marker?): Boolean {
+        when(marker?.title){
+            "청학점"->showBottomSheet("chunghak")
+            "인천 서구점"->showBottomSheet("seogu")
+            "구월점"->showBottomSheet("guwal")
+        }
         return true
     }
 
@@ -43,7 +47,11 @@ class LocationMapActivity : FragmentActivity() , OnMapReadyCallback, GoogleMap.O
         for (i in 0 until locationArray.size){
             val markerOptions = MarkerOptions()
             markerOptions.position(locationArray.get(i))
-//                .title("청학동 베프시네마")
+            when(i){
+                0 -> markerOptions.title("청학점")
+                1 -> markerOptions.title("인천 서구점")
+                2 -> markerOptions.title("구월점")
+            }
             val smallMarker: Bitmap? =
                 Bitmap.createScaledBitmap(b!!, dpToPx(baseContext,66), dpToPx(baseContext,83), false)
             markerOptions.icon(
@@ -66,9 +74,9 @@ class LocationMapActivity : FragmentActivity() , OnMapReadyCallback, GoogleMap.O
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as SupportMapFragment?
         mapFragment!!.getMapAsync(this)
     }
-    fun showBottomSheet(){
+    private fun showBottomSheet(tag:String){
         val bottomSheetFragment=BottomSheetFragment()
-        bottomSheetFragment.show(supportFragmentManager,"bottomSheet")
+        bottomSheetFragment.show(supportFragmentManager,tag)
     }
 
     // dp -> pixel 단위로 변경

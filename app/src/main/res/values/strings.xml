@@ -30,14 +30,17 @@
     <string-array name="guwal">
         <item>베프시네마 구월점</item>
         <item>인천 남동구 서판로 25-1</item>
+        <item>032-777-7777</item>
     </string-array>
 
     <string-array name="seogu">
         <item>베프시네마 인천 서구점</item>
         <item>인천 서구 건지로284번길 90</item>
+        <item>032-110-8250</item>
     </string-array>
     <string-array name="chunghak">
         <item>베프시네마 청학점</item>
         <item>인천 연수구 비류대로294번길 16</item>
+        <item>032-411-6715</item>
     </string-array>
 </resources>
