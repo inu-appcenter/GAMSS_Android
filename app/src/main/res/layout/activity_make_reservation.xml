@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent" android:background="@color/color_0e0e0e">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:layout_marginTop="21.65dp"
+        android:layout_marginStart="40.15dp"
+        android:paddingTop="6.65dp"
+        android:paddingBottom="6.65dp"
+        android:paddingStart="9.15dp"
+        android:paddingEnd="9.15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17.3sp"
+        android:textColor="@color/color_ffffff"
+        android:text="예매하기"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20.7sp"
+        android:textColor="@color/color_3effde"
+        android:text="총 인원"
+        android:layout_marginTop="65dp"
+        android:layout_marginStart="9.15dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_back"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back"/>
+
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/spinner_people"
+        android:layout_width="91.3dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:backgroundSelector="@drawable/spinner_border"
+        app:arrowDrawable="@drawable/icon_spinner"
+        app:arrowTint="@color/color_ffffff"
+        app:textTint="@color/color_ffffff"
+        app:layout_constraintEnd_toEndOf="@+id/tv_price"
+        app:layout_constraintTop_toTopOf="@id/people"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20.7sp"
+        android:textColor="@color/color_3effde"
+        android:text="결제금액"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/people"
+        app:layout_constraintTop_toBottomOf="@+id/people"
+        app:layout_constraintBottom_toTopOf="@id/memo"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20.7sp"
+        android:textColor="@color/color_ffffff"
+        android:text="10000원"
+        android:layout_marginEnd="53.7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/price"/>
+
+    <TextView
+        android:id="@+id/memo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20.7sp"
+        android:textColor="@color/color_ffffff"
+        android:text="요청사항"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/edt_memo"
+        app:layout_constraintStart_toStartOf="@+id/price"/>
+
+    <EditText
+        android:id="@+id/edt_memo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/memo_rounded"
+        android:layout_marginStart="53.3dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="150dp"
+        android:gravity="start"
+        android:paddingTop="14.7dp"
+        android:paddingStart="16.3dp"
+        android:textColorHint="@color/color_868686"
+        android:textSize="11sp"
+        android:lineSpacingExtra="2sp"
+        android:hint="편안한 영화관람이 이루어질 수 있도록 베프시네마가 \n준비했으면 하는 것들이 있으시다면 적어주세요 :)"
+        app:layout_constraintHeight_percent="0.206"
+        app:layout_constraintBottom_toTopOf="@+id/btn_pay"/>
+
+    <ImageButton
+        android:id="@+id/btn_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/btn_pay"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
