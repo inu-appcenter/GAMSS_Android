@@ -149,6 +149,7 @@
         app:layout_constraintStart_toStartOf="@id/tv_remaining"/>
 
     <ImageButton
+        android:id="@+id/btn_reservation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00000000"
