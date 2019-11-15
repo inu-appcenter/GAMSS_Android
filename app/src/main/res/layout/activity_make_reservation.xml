@@ -42,10 +42,15 @@
         app:layout_constraintStart_toStartOf="@+id/btn_back"
         app:layout_constraintTop_toBottomOf="@+id/btn_back"/>
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/spinner_people"
         android:layout_width="91.3dp"
-        android:layout_height="33.3dp"
-        android:background="@drawable/spinner_border"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:backgroundSelector="@drawable/spinner_border"
+        app:arrowDrawable="@drawable/icon_spinner"
+        app:arrowTint="@color/color_ffffff"
+        app:textTint="@color/color_ffffff"
         app:layout_constraintEnd_toEndOf="@+id/tv_price"
         app:layout_constraintTop_toTopOf="@id/people"/>
 
@@ -95,7 +100,8 @@
         android:paddingTop="14.7dp"
         android:paddingStart="16.3dp"
         android:textColorHint="@color/color_868686"
-        android:textSize="10sp"
+        android:textSize="11sp"
+        android:lineSpacingExtra="2sp"
         android:hint="편안한 영화관람이 이루어질 수 있도록 베프시네마가 \n준비했으면 하는 것들이 있으시다면 적어주세요 :)"
         app:layout_constraintHeight_percent="0.206"
         app:layout_constraintBottom_toTopOf="@+id/btn_pay"/>
