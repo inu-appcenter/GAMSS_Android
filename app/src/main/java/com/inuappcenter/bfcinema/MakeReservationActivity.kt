@@ -3,6 +3,7 @@ package com.inuappcenter.bfcinema
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_make_reservation.*
 import org.angmarch.views.NiceSpinner
@@ -35,6 +36,7 @@ class MakeReservationActivity  : AppCompatActivity(), View.OnClickListener {
                 onBackPressed()
             }
             R.id.btn_pay -> {
+                Toast.makeText(this,"예매 완료! 펀딩 성공 시 결제가 진행됩니다", Toast.LENGTH_SHORT).show()
                 val intent = Intent()
                 intent.putExtra("num", item)
                 setResult(100, intent)
