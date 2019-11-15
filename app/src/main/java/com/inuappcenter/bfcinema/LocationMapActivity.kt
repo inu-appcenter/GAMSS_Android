@@ -31,14 +31,14 @@ class LocationMapActivity : FragmentActivity() , OnMapReadyCallback, GoogleMap.O
 
         mMap = googleMap!!
         val chunghak = LatLng(37.425434, 126.66528)
-        val guwal = LatLng(37.490819, 126.671800)
-        val bupyung = LatLng(37.462026, 126.725160)
+        val seogu = LatLng(37.490819, 126.671800)
+        val guwal = LatLng(37.462026, 126.725160)
         val center = LatLng(37.460473, 126.691348)
 
         val locationArray : ArrayList<LatLng> = java.util.ArrayList()
         locationArray.add(chunghak)
         locationArray.add(guwal)
-        locationArray.add(bupyung)
+        locationArray.add(seogu)
 
         for (i in 0 until locationArray.size){
             val markerOptions = MarkerOptions()
