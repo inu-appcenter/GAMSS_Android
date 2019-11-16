@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import kotlinx.android.synthetic.main.fragment_movie.iv_poster
 import kotlinx.android.synthetic.main.fragment_movie.tv_name
@@ -21,6 +23,19 @@ class MovieDetailActivity : AppCompatActivity(), View.OnClickListener {
 
         btn_back.setOnClickListener(this)
         btn_reservation.setOnClickListener(this)
+
+        YoYo.with(Techniques.FadeInUp).duration(1000).playOn(iv_poster)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_name)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_genre)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_year)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_date)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_location)
+        YoYo.with(Techniques.Pulse).duration(1400).playOn(tv_remaining)
+        YoYo.with(Techniques.FadeInUp).duration(1400).playOn(tv_status)
+        YoYo.with(Techniques.SlideInRight).duration(1400).playOn(iv_progress)
+
+        YoYo.with(Techniques.FadeInDown).duration(1000).playOn(tv_story)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(ll_info)
     }
 
     override fun onClick(v: View?) {
