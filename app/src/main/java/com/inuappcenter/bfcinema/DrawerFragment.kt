@@ -10,6 +10,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import kotlinx.android.synthetic.main.fragment_drawer.*
 
 
@@ -25,6 +27,7 @@ class DrawerFragment : Fragment(),View.OnClickListener{
         val view = inflater.inflate(R.layout.fragment_drawer, container, false)
 
         val map = view.findViewById<LinearLayout>(R.id.linear_map)
+
         map.setOnClickListener(this)
 //        linear_pay.setOnClickListener(this)
 //        linear_user_info.setOnClickListener(this)
@@ -32,6 +35,9 @@ class DrawerFragment : Fragment(),View.OnClickListener{
         return view
     }
     override fun onClick(view: View?) {
+//        YoYo.with(Techniques.FadeOut)
+//            .duration(200)
+//            .playOn(view)
         when (view){
             linear_map -> {
                 val intentMap = Intent(context,LocationMapActivity::class.java)

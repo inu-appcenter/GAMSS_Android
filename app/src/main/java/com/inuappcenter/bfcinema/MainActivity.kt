@@ -10,6 +10,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_vote.*
 
@@ -65,8 +67,12 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
                     progressBar.setProgress(24,true)
                     tv_percent1.text = "24%"
                     tv_percent2.text = "76%"
-                    progressBar.rotation = 180F
 
+                    YoYo.with(Techniques.FadeIn)
+                        .duration(300)
+                        .playOn(progressBar)
+
+                    progressBar.rotation = 180F
                     tv_movie1.setTextColor(Color.parseColor("#3effde"))
                     tv_movie_info1.setTextColor(Color.parseColor("#3effde"))
                 }
@@ -75,11 +81,20 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
                     progressBar.setProgress(82,true)
                     tv_percent1.text = "18%"
                     tv_percent2.text = "82%"
-
+                    YoYo.with(Techniques.FadeIn)
+                        .duration(300)
+                        .playOn(progressBar)
                     tv_movie2.setTextColor(Color.parseColor("#3effde"))
                     tv_movie_info2.setTextColor(Color.parseColor("#3effde"))
                 }
             }
+            YoYo.with(Techniques.FadeIn)
+                .duration(300)
+                .playOn(tv_percent1)
+            YoYo.with(Techniques.FadeIn)
+                .duration(300)
+                .playOn(tv_percent2)
+
             progressBar.visibility = View.VISIBLE
             tv_percent1.visibility = View.VISIBLE
             tv_percent2.visibility = View.VISIBLE
