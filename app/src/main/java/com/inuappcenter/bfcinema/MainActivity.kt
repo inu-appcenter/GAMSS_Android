@@ -47,7 +47,10 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         btn_drawer.setOnClickListener(this)
         linear_vote1.setOnClickListener(this)
         linear_vote2.setOnClickListener(this)
+    }
 
+    override fun onResume() {
+        super.onResume()
         YoYo.with(Techniques.FadeInUp).duration(1000).playOn(tv_thisweek)
         YoYo.with(Techniques.FadeInUp).duration(1000).playOn(textView)
         YoYo.with(Techniques.FadeInUp).duration(1000).playOn(textView)
