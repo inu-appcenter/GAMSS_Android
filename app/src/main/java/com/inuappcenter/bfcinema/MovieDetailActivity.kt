@@ -13,6 +13,22 @@ import kotlinx.android.synthetic.main.fragment_movie.tv_name
 import kotlinx.android.synthetic.main.layout_movie_detail.*
 
 class MovieDetailActivity : AppCompatActivity(), View.OnClickListener {
+    override fun onResume() {
+        super.onResume()
+
+        YoYo.with(Techniques.FadeInUp).duration(1000).playOn(iv_poster)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_name)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_genre)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_year)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_date)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_location)
+        YoYo.with(Techniques.Pulse).duration(1400).playOn(tv_remaining)
+        YoYo.with(Techniques.FadeInUp).duration(1400).playOn(tv_status)
+        YoYo.with(Techniques.FadeInLeft).duration(1400).playOn(iv_progress)
+
+        YoYo.with(Techniques.FadeInDown).duration(1000).playOn(tv_story)
+        YoYo.with(Techniques.FadeIn).duration(1000).playOn(ll_info)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,19 +39,6 @@ class MovieDetailActivity : AppCompatActivity(), View.OnClickListener {
 
         btn_back.setOnClickListener(this)
         btn_reservation.setOnClickListener(this)
-
-        YoYo.with(Techniques.FadeInUp).duration(1000).playOn(iv_poster)
-        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_name)
-        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_genre)
-        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_year)
-        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_date)
-        YoYo.with(Techniques.FadeIn).duration(1000).playOn(tv_location)
-        YoYo.with(Techniques.Pulse).duration(1400).playOn(tv_remaining)
-        YoYo.with(Techniques.FadeInUp).duration(1400).playOn(tv_status)
-        YoYo.with(Techniques.SlideInRight).duration(1400).playOn(iv_progress)
-
-        YoYo.with(Techniques.FadeInDown).duration(1000).playOn(tv_story)
-        YoYo.with(Techniques.FadeIn).duration(1000).playOn(ll_info)
     }
 
     override fun onClick(v: View?) {
