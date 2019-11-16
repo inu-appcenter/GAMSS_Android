@@ -22,6 +22,7 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
             val intentSplash = Intent(this, LoginActivity::class.java)
             this.startActivity(intentSplash)
+            overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left)
             this.finish()
         }, SPLASH_DISPLAY_LENGTH.toLong())
     }

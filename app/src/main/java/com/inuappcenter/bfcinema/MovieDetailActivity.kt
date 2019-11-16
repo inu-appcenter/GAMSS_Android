@@ -48,6 +48,7 @@ class MovieDetailActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_reservation -> {
                 val intent = Intent(this, MakeReservationActivity::class.java)
                 startActivityForResult(intent, 100)
+                overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left)
             }
         }
     }

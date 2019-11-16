@@ -20,9 +20,18 @@ import kotlinx.android.synthetic.main.activity_location_map.*
 class LocationMapActivity : FragmentActivity() , OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
     override fun onMarkerClick(marker: Marker?): Boolean {
         when(marker?.title){
-            "청학점"->showBottomSheet("chunghak")
-            "인천 서구점"->showBottomSheet("seogu")
-            "구월점"->showBottomSheet("guwal")
+            "청학점"->{
+                showBottomSheet("chunghak")
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker.position,15f))
+            }
+            "인천 서구점"->{
+                showBottomSheet("seogu")
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker.position,15f))
+            }
+            "구월점"->{
+                showBottomSheet("guwal")
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker.position,15f))
+            }
         }
         return true
     }
