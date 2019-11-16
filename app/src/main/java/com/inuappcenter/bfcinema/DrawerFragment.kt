@@ -41,6 +41,7 @@ class DrawerFragment : Fragment(),View.OnClickListener{
         when (view){
             linear_map -> {
                 val intentMap = Intent(context,LocationMapActivity::class.java)
+                activity?.overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left)
                 startActivity(intentMap)
                 close()
             }

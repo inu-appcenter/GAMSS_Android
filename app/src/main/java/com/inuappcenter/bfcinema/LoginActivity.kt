@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             btn_naver -> {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left)
                 finish()
             }
         }
