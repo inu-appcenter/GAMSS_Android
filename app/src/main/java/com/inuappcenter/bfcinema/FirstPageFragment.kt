@@ -29,6 +29,7 @@ class FirstPageFragment : Fragment() {
         imageView.setOnClickListener{
             val intent = Intent(activity, MovieDetailActivity::class.java)
             intent.putExtra("movie", "movie1")
+            activity?.overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left)
             startActivity(intent)
         }
         return view

@@ -10,8 +10,13 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_event.*
+import kotlinx.android.synthetic.main.layout_funding.*
 import kotlinx.android.synthetic.main.layout_vote.*
+import kotlinx.android.synthetic.main.layout_vote.textView
 
 class MainActivity : AppCompatActivity() , View.OnClickListener {
     val VOTE_1 = 1
@@ -42,6 +47,10 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         btn_drawer.setOnClickListener(this)
         linear_vote1.setOnClickListener(this)
         linear_vote2.setOnClickListener(this)
+
+        YoYo.with(Techniques.FadeInUp).duration(1000).playOn(tv_thisweek)
+        YoYo.with(Techniques.FadeInUp).duration(1000).playOn(textView)
+        YoYo.with(Techniques.FadeInUp).duration(1000).playOn(textView)
     }
 
     fun dpToPx(context:Context, dp:Float): Int {

@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import kotlinx.android.synthetic.main.activity_make_reservation.*
 import org.angmarch.views.NiceSpinner
 import java.util.*
@@ -24,10 +26,12 @@ class MakeReservationActivity  : AppCompatActivity(), View.OnClickListener {
                 "1명" -> {
                     item = 1
                     tv_price.text = "10000원"
+                    YoYo.with(Techniques.Tada).duration(1000).playOn(tv_price)
                 }
                 "2명" -> {
                     item = 2
                     tv_price.text = "20000원"
+                    YoYo.with(Techniques.Tada).duration(1000).playOn(tv_price)
                 }
             }
         }
