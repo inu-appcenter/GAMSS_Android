@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="294.7dp"
+    android:layout_height="274.7dp"
     android:background="@color/color_0e0e0e">
 
     <TextView
@@ -14,7 +14,6 @@
         android:text="이벤트"
         android:textColor="#fff"
         android:textSize="30.7sp"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="37.3dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
